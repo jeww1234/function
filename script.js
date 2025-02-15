@@ -53,15 +53,14 @@ ymd(1234, 12, 78);
 
 
 let arr = [100,200,123,101,2,99];
-let temp = 0;
-let arrLength = arr.length;
 let findSmallestElement = (arr) =>{
-    if(arr[0] == undefined){
+    if(arr.length === 0){
         console.log(0);
         return 0;
     }else{
+        let arrLength = arr.length;
         for(let j = 0; j < arrLength; j++){
-        for(let i = 0; i < arrLength; i++){     
+        for(let i = 0; i < arrLength - 1; i++){     
             if(arr[i] > arr[i+1]){
                 [arr[i], arr[i+1]] = [arr[i+1], arr[i]];
             }
